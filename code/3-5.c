@@ -11,10 +11,10 @@ int main(int argc, const char* argv[]) {
 
     int sum = 0;
     int num, c;
-   char buf[100];
+    char buf[100];
     while ((c = fscanf(fp, "%d", &num)) != EOF) {
-        sum += num;
-        if (c == 0) {
+        if (c==1)    sum += num;
+        else {
             fscanf(fp, "%s", buf);
             fprintf(stderr, "invalid input %s\n", buf);
         }
