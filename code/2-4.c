@@ -16,13 +16,13 @@ int main(int argc, const char* argv[]) {
             // c(읽은 문자) - 'a'(97)는 0부터 25까지의 인덱스를 생성
         }
     }
+    fclose(fp);
 
     for (int i = 0; i < 26; i++) {
         if (count[i] > 0) {
             printf("%c: %d\n", 'a' + i, count[i]);
         }
     }
-    fclose(fp);
     return 0;
 }
 
