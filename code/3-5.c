@@ -10,12 +10,14 @@ int main(int argc, const char* argv[]) {
 
 
     int sum = 0;
-    int num;
-    while (fscanf(fp, "%d", &num) == 1) {
+    int num, c;
+   char buf[100];
+    while ((c = fscanf(fp, "%d", &num)) != EOF) {
         sum += num;
-    }
-    if (fscanf(fp, "%d", &num) == 0) {
-        fprintf(stderr, "invalid input %s\n", *fp);
+        if (c == 0) {
+            fscanf(fp, "%s", buf);
+            fprintf(stderr, "invalid input %s\n", buf);
+        }
     }
 
 
