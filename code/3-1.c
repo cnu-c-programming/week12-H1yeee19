@@ -6,7 +6,7 @@ int main(int argc, const char* argv[]) {
     
     FILE* fp = fopen(argv[1], "r");
      if(fp == NULL) {
-        fprintf(stderr,"file does not exists");
+        fprintf(stderr,"file dose not exists");
         return 1;
     }
 
